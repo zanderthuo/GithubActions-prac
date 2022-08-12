@@ -1,0 +1,46 @@
+# =================================================================
+# All Configs Start
+# =================================================================
+
+listener 1884
+
+connection protected-broker-bridge-oves
+address mqtt-2.omnivoltaic.com:8883
+topic # both 0
+
+allow_anonymous false
+password_file /mosquitto/config/password.txt
+
+bridge_cafile /mosquitto/config/ca.crt
+bridge_certfile /mosquitto/config/client-certs/client.crt
+bridge_keyfile /mosquitto/config/client-certs/client.key
+
+#tls_version tlsv1.2
+#require_certificate true
+
+# =================================================================
+# All Configs End
+# =================================================================
+
+
+# =================================================================
+# All configurations start
+# =================================================================
+
+
+listener 8883
+allow_anonymous false
+#password_file /mosquitto/config/pwd.txt
+#acl_file /mosquitto/config/acl.txt
+
+cafile /mosquitto/config/server-certs/ca.crt
+certfile /mosquitto/config/server-certs/server.crt
+keyfile /mosquitto/config/server-certs/server.key
+
+tls_version tlsv1.2
+#require_certificate true
+
+
+# =================================================================
+# All configurations end
+# =================================================================
